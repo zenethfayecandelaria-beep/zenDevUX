@@ -30,11 +30,9 @@ function checkPass() {
     const bday = document.getElementById('birthday').value;
     const nick = document.getElementById('nickname').value.trim(); // Trim para iwas error sa extra space
 
-    // Eto na yung hiningi mo, bes:
-    // Birthday: 06/28/2007 | Nickname: Nikolay
     if(bday === "06/28/2007" && nick.toLowerCase() === "nikolay") {
         showPage('home');
     } else {
-        alert("Ops! Mali po. Check your spelling or birthday format!");
+        alert("Ops! Mali po. Haixxt buti nalang cutie pie ka. Try again!");
     }
 }
