@@ -1,0 +1,84 @@
+:root {
+    --deep-pink: #d63384;
+    --soft-pink: #ffc0cb;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+
+.page {
+    display: none;
+    min-height: 100vh;
+    width: 100%;
+    background: linear-gradient(180deg, var(--soft-pink) 0%, #ff85a2 100%);
+    position: relative;
+    padding: 20px;
+}
+
+.active { display: flex !important; }
+
+.centered-page { justify-content: center; align-items: center; flex-direction: column; }
+
+.scrollable-page { flex-direction: column; align-items: center; overflow-y: auto; }
+
+.content-wrapper { width: 100%; display: flex; flex-direction: column; align-items: center; padding-bottom: 120px; }
+
+/* --- FIXED POLAROID SECTION --- */
+.polaroid { 
+    background: white; 
+    padding: 15px; 
+    padding-bottom: 35px; /* Dinagdagan para sa space ng text sa baba */
+    box-shadow: 10px 10px 20px rgba(0,0,0,0.15); 
+    width: 300px; /* FIXED WIDTH para hindi na dambuhala! */
+    margin: 0 auto; /* Para laging nasa gitna ng screen */
+    text-align: center; /* DITO NATIN SINI-CENTER YUNG TEXT */
+}
+
+.polaroid img { 
+    width: 100%; 
+    height: 300px; /* Ginawa nating square ang crop para pantay */
+    object-fit: cover; 
+    border: 1px solid #eee; 
+}
+
+.polaroid-caption, .pol-text { 
+    font-family: 'Dancing Script', cursive; 
+    font-size: 1.5rem; /* Pinalaki ng konti para mabasa */
+    margin-top: 15px; 
+    color: #444; 
+    display: block; /* Siniguradong block para gumana ang centering */
+    width: 100%;
+}
+
+/* --- SMALL POLAROID (Para sa Random/Creator Page) --- */
+.small-pol {
+    width: 160px !important; 
+    padding: 10px !important;
+    padding-bottom: 25px !important;
+}
+
+.small-pol img {
+    height: 150px !important;
+}
+
+.small-pol .pol-text {
+    font-size: 1rem !important;
+}
+
+/* --- LIBRARY --- */
+.book-cover { width: 15rem; height: 21rem; border-radius: 0 1rem 1rem 0; object-fit: cover; box-shadow: 10px 10px 20px rgba(0,0,0,0.2); margin-bottom: 1rem; }
+.book-label { color: white; font-weight: 700; background: var(--deep-pink); padding: 0.5rem 2rem; border-radius: 9999px; text-decoration: none; }
+
+/* --- BUTTONS --- */
+.continue-btn, .unlock-submit-btn, .gallery-trigger-btn { background: var(--deep-pink); color: white; padding: 12px 35px; border-radius: 50px; font-weight: 700; cursor: pointer; border: none; box-shadow: 0 4px 15px rgba(214, 51, 132, 0.4); }
+
+/* --- NAV BAR --- */
+.nav-bar { position: fixed; bottom: 25px; left: 50%; transform: translateX(-50%); background: white; padding: 10px 20px; border-radius: 50px; display: flex; gap: 10px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); z-index: 1000; }
+.nav-btn { padding: 8px 18px; border-radius: 20px; border: none; background: none; font-weight: 600; cursor: pointer; }
+.active-tab { background: var(--deep-pink); color: white; box-shadow: 0 0 15px var(--deep-pink); }
+
+/* --- ANIMATIONS --- */
+.typewriter { overflow: hidden; white-space: nowrap; border-right: 3px solid white; animation: typing 3.5s steps(40, end); margin: 0 auto; width: fit-content; }
+@keyframes typing { from { width: 0 } to { width: 100% } }
+
+.glass { background: rgba(255, 255, 255, 0.3); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2); }
+.unlock-input { width: 100%; padding: 12px; border-radius: 15px; border: none; margin-bottom: 10px; color: #333; }
